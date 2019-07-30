@@ -12,6 +12,7 @@ namespace Ventas.Modelos
         public string Nombre { get; set; }
         public string Telefono { get; set; }
         public Ciudad Ciudad { get; set; }
+        public int CiudadId { get; set; }
         public string Direccion { get; set; }
 
         public Cliente(int id, string nombre, string telefono, Ciudad ciudad, string direccion)
@@ -20,7 +21,9 @@ namespace Ventas.Modelos
             Nombre = nombre;
             Telefono = telefono;
             Ciudad = ciudad;
+            CiudadId = ciudad.Id;
             Direccion = direccion;
+
         }
     }
 }

@@ -20,6 +20,9 @@ namespace Ventas
             var clientesBL = new ClientesBL();
 
             listadeClientesBindingSource.DataSource = clientesBL.ListadeClientes;
+
+            var ciudadBL = new CiudadBL();
+            listadeCiudadBindingSource.DataSource = ciudadBL.ListadeCiudad;
         }
     }
 }
