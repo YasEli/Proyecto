@@ -7,6 +7,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using Ventas.BL;
 
 namespace Ventas
 {
@@ -15,6 +16,10 @@ namespace Ventas
         public Form1()
         {
             InitializeComponent();
+
+            var clientesBL = new ClientesBL();
+
+            listadeClientesBindingSource.DataSource = clientesBL.ListadeClientes;
         }
     }
 }
